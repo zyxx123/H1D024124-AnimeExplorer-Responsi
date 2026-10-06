@@ -27,11 +27,7 @@ fun AppNavigation() {
             HomeScreen(
                 viewModel = viewModel,
                 onNavigateToDetail = { anime ->
-                    // For simplicity in sharing complex objects without serialization in navigation routes,
-                    // we can store it in a temporary local variable or use savedStateHandle.
-                    // But in Jetpack Navigation Compose, passing primitive IDs is better.
-                    // Since we already fetched the list, we can pass the ID and retrieve it.
-                    navController.navigate("detail/\")
+                    navController.navigate("detail/${anime.id}")
                 }
             )
         }
@@ -39,9 +35,6 @@ fun AppNavigation() {
         composable("detail/{animeId}") { backStackEntry ->
             val animeId = backStackEntry.arguments?.getString("animeId")?.toIntOrNull()
             
-            // Find the anime from the viewmodel's current success state
-            // If the state is not success (e.g. process killed and recreated), this would be null,
-            // but for a simple requirement this is sufficient.
             val currentList = (viewModel.uiState.value as? com.example.animeexplorer.ui.viewmodel.UiState.Success)?.data ?: emptyList()
             val anime = currentList.find { it.id == animeId }
             

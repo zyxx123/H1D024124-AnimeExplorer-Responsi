@@ -105,16 +105,16 @@ fun AnimeItem(anime: Anime, onClick: () -> Unit) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "Rating: \",
+                    text = "Rating: ${anime.score ?: "N/A"}",
                     style = MaterialTheme.typography.bodyMedium
                 )
                 Text(
-                    text = "Tahun: \",
+                    text = "Tahun: ${anime.year ?: "N/A"}",
                     style = MaterialTheme.typography.bodyMedium
                 )
             }
             Text(
-                text = "Episode: \",
+                text = "Episode: ${anime.episodes ?: "N/A"}",
                 style = MaterialTheme.typography.bodyMedium
             )
         }

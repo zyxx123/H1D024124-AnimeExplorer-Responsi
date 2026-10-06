@@ -1,4 +1,4 @@
-﻿# Anime Explorer
+# Anime Explorer
 
 ## Deskripsi
 Anime Explorer adalah aplikasi mobile Android sederhana yang dibuat untuk menampilkan daftar anime secara dinamis. Aplikasi ini dirancang untuk memenuhi requirement tugas responsi dengan menerapkan arsitektur modern Android (Jetpack Compose, MVVM, dan Material Design 3).
@@ -47,4 +47,5 @@ Aplikasi menggunakan **Tenrai API** tanpa memerlukan otentikasi.
 4. Tekan tombol **Run** (Shift+F10) pada Android Studio.
 
 ## Screenshot
-*(Screenshot dapat ditambahkan di sini)*
+![Home Screen](screen%201.png)
+![Detail Screen](screen%202.png)
